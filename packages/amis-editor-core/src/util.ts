@@ -1100,6 +1100,9 @@ export function setThemeConfig(config: any) {
 
 // 将主题数据传入组件的schema
 export function setThemeDefaultData(data: any) {
+  if (!themeConfig.global) {
+    return data;
+  }
   const schemaData = cloneDeep(data);
   schemaData.themeConfig = themeConfig;
   assign(schemaData, getGlobalData(themeConfig));
