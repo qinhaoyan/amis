@@ -541,18 +541,14 @@ export function Icon({
 
   // 直接传入svg字符串
   if (typeof icon === 'string' && icon.startsWith('<svg')) {
-    return svgString2Dom(
-      icon,
-      {
-        className,
-        classNameProp,
-        style,
-        cx,
-        events,
-        extra
-      },
-      vendor
-    );
+    return svgString2Dom(icon, {
+      className,
+      classNameProp,
+      style,
+      cx,
+      events,
+      extra
+    });
   }
 
   // icon是链接
